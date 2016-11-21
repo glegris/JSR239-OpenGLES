@@ -193,11 +193,11 @@ public abstract class AbstractJavaEGL10 implements EGL10 {
 		if (pixmap == null) {
 			throwIAE(Errors.EGL_PIXMAP_NULL);
 		}
-		if (!(pixmap instanceof NativeSurface)) {
+		if (!(pixmap instanceof SurfaceHolder)) {
 			throwIAE(Errors.EGL_BAD_PIXMAP);
 		}
 
-		NativeSurface nativeSurface = (NativeSurface) pixmap;
+		SurfaceHolder nativeSurface = (SurfaceHolder) pixmap;
 		int width = nativeSurface.getWidth();
 		int height = nativeSurface.getHeight();
 
@@ -235,11 +235,11 @@ public abstract class AbstractJavaEGL10 implements EGL10 {
 			throwIAE(Errors.EGL_ATTRIBS_NOT_TERMINATED);
 		}
 
-		if (!(win instanceof NativeSurface)) {
+		if (!(win instanceof SurfaceHolder)) {
 			throwIAE(Errors.EGL_BAD_WINDOW_SURFACE);
 		}
 
-		NativeSurface nativeSurface = (NativeSurface) win;
+		SurfaceHolder nativeSurface = (SurfaceHolder) win;
 		int width = nativeSurface.getWidth();
 		int height = nativeSurface.getHeight();
 

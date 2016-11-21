@@ -18,10 +18,13 @@
 
 package org.thenesis.opengles;
 
-public interface NativeSurface {
+public interface SurfaceHolder {
 	
 	public int getWidth();
 	public int getHeight();
 	public int[] getData();
+	public void lock();
+	public void unlock();
+	public void flush();
 
 }

@@ -35,7 +35,7 @@ public class JavaEGLSurface extends EGLSurface {
 	/**
 	 * An LCDUI Graphics object referencing the surface.
 	 */
-	private NativeSurface target;
+	private SurfaceHolder target;
 
 	public JavaEGLSurface(int[] buf, int width, int height) {
 		//this.largestPBuffer = largestPBuffer;
@@ -49,11 +49,11 @@ public class JavaEGLSurface extends EGLSurface {
 		return "EGLSurfaceImpl[" + id + "]";
 	}
 
-	public void setTarget(NativeSurface target) {
+	public void setTarget(SurfaceHolder target) {
 		this.target = target;
 	}
 
-	public NativeSurface getTarget() {
+	public SurfaceHolder getTarget() {
 		return this.target;
 	}
 
